@@ -2,15 +2,11 @@
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
-    "lib": ["es7", "DOM"],
+    "lib": ["es7", "dom"],
     "target": "es6",
     "module": "commonjs",
     "declaration": true
   },
-  "include": [
-    "src/*.ts"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["src/*.ts"],
+  "exclude": ["node_modules"]
 }

@@ -1,37 +1,51 @@
-# Unfurl 
+# @Jaymun723/Unfurl
+
+> This is a fork of the [original one](https://github.com/jacktuck/unfurl). This version has fixed typings !
+> Install with `npm i @jaymun723/unfurl`
 
 A metadata scraper with support for oEmbed, Twitter Cards and Open Graph Protocol for Node.js (>=v6.0.0)
 
-[![Travis CI](https://img.shields.io/travis/jacktuck/unfurl.svg?style=flat-square)](https://travis-ci.org/jacktuck/unfurl)
-[![Coverage Status](https://img.shields.io/coveralls/jacktuck/unfurl.svg?style=flat-square)](https://coveralls.io/github/jacktuck/unfurl?branch=master)
-[![Known Vulnerabilities](https://snyk.io/test/github/jacktuck/unfurl/badge.svg?style=flat-square)](https://snyk.io/test/github/jacktuck/unfurl)
+[![Known Vulnerabilities](https://snyk.io/test/github/jaymun723/unfurl/badge.svg?style=flat-square)](https://snyk.io/test/github/jaymun723/unfurl)
 ![NPM](https://img.shields.io/npm/v/unfurl.js.svg?style=flat-square)
 
 ## The what
+
 Unfurl _(spread out from a furled state)_ will take a `url` and some `options`, fetch the `url`, extract the metadata we care about and format the result in a saine way. It supports all major metadata providers and expanding it to work for any others should be trivial.
 
 ## The why
+
 So you know when you link to something on Slack, or Facebook, or Twitter - they typically show a preview of the link. To do so they have crawled the linked website for metadata and enriched the link by providing more context about it. Which usually entails grabbing its title, description and image/player embed.
 
 ## The how
+
 ### `unfurl(url [, opts])`
+
 #### url - `string`
+
 ---
+
 #### opts - `object` of:
--  `oembed?: boolean` - support retrieving oembed metadata
--  `timeout?  number` - req/res timeout in ms, it resets on redirect. 0 to disable (OS limit applies) 
--  `follow?: number` - maximum redirect count. 0 to not follow redirect
--  `compress?: boolean` - support gzip/deflate content encoding 
--  `size?: number` - maximum response body size in bytes. 0 to disable 
--  `userAgent?: string` - User-Agent string is often used for content negotiation
+
+- `oembed?: boolean` - support retrieving oembed metadata
+- `timeout? number` - req/res timeout in ms, it resets on redirect. 0 to disable (OS limit applies)
+- `follow?: number` - maximum redirect count. 0 to not follow redirect
+- `compress?: boolean` - support gzip/deflate content encoding
+- `size?: number` - maximum response body size in bytes. 0 to disable
+- `userAgent?: string` - User-Agent string is often used for content negotiation
+
 ---
+
 #
+
 ```typescript
-const unfurl = require('./unfurl.js')
+import unfurl from './unfurl.js'
 const result = unfurl('https://github.com/trending')
 ```
+
 ---
+
 #### result is `<Promise<Metadata>>`
+
 ```typescript
 type Metadata = {
   oEmbed?: {
@@ -78,7 +92,7 @@ type Metadata = {
         name: string
         url: string
       }
-    },
+    }
     images: {
       url: string
       alt: string
@@ -98,7 +112,7 @@ type Metadata = {
     audio?: {
       url: string
       secure_url?: string
-      type: string 
+      type: string
     }[]
     description?: string
     determiner?: string
@@ -116,9 +130,9 @@ type Metadata = {
 ```
 
 ## The who 💖
+
 _(If you use unfurl.js too feel free to [add your project](https://github.com/jacktuck/unfurl/edit/master/README.md))_
+
 - [vapid/vapid](https://github.com/vapid/vapid) - A template-driven content management system
 - [beeman/micro-unfurl](https://github.com/beeman/micro-unfurl) - small microservice that unfurls a URL and returns the OpenGraph meta data.
 - [probot/unfurl](https://github.com/probot/unfurl) - a GitHub App built with probot that unfurls links on Issues and Pull Request discussions
-
-

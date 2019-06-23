@@ -1,5 +1,5 @@
 {
-  "name": "unfurl.js",
+  "name": "@jaymun723/unfurl.js",
   "engines": {
     "node": ">=6.0.0"
   },
@@ -56,7 +56,7 @@
     "node.js",
     "fast"
   ],
-  "repository": "git://github.com/jacktuck/unfurl.git",
+  "repository": "git://github.com/jaymun723/unfurl.git",
   "author": "Jack Tuck",
-  "license": "ISC"
+  "license": "MIT"
 }
