@@ -1,7 +1,7 @@
 # @Jaymun723/Unfurl
 
 > This is a fork of the [original one](https://github.com/jacktuck/unfurl). This version has fixed typings !
-> Install with `npm i @jaymun723/unfurl`
+> Install with `npm i @jaymun723/unfurl.js`
 
 A metadata scraper with support for oEmbed, Twitter Cards and Open Graph Protocol for Node.js (>=v6.0.0)
 
