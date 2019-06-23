@@ -65,7 +65,7 @@ export declare type Metadata = {
             url: string;
             alt: string;
         }[];
-    }[];
+    };
     open_graph: {
         title: string;
         type: string;
@@ -93,5 +93,5 @@ export declare type Metadata = {
             width?: number;
             tags?: string[];
         }[];
-    }[];
+    };
 };
