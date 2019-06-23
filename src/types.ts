@@ -26,11 +26,13 @@ export type Metadata = {
     provider_name?: string
     provider_url?: string
     cache_age?: number
-    thumbnails?: [{
-      url?: string
-      width?: number
-      height?: number
-    }]
+    thumbnails?: [
+      {
+        url?: string
+        width?: number
+        height?: number
+      }
+    ]
   }
   twitter_card: {
     card: string
@@ -66,7 +68,7 @@ export type Metadata = {
       url: string
       alt: string
     }[]
-  }[]
+  }
   open_graph: {
     title: string
     type: string
@@ -94,5 +96,5 @@ export type Metadata = {
       width?: number
       tags?: string[]
     }[]
-  }[]
+  }
 }
